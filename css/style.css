@@ -277,6 +277,7 @@ footer .flex-container{
 
     .hero-section{
         margin-top:50px;
+        justify-content: center;
     }
 
     .flex-container, .planos__container, .servicos__cards{
