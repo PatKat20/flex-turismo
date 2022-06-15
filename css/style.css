@@ -1,0 +1,317 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Open Sans", sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+:root{
+    --primary-color:#122A57;
+}
+
+ul{
+    list-style:none;
+}
+
+a{
+    text-decoration:none;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+.flex-container{
+    max-width:992px;
+    margin:auto;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Header area */
+#main-header{
+    background-color:var(--primary-color);
+    height:100px;
+    line-height: 100px;
+    position:sticky;
+    top:0;
+    left:0;
+}
+
+.main-header__title{
+    font-size:2em;
+    font-weight: 700;
+    color:white;
+}
+
+.main-header__menu{
+    display: flex;
+    width:300px;
+    justify-content: space-around;
+    flex-wrap:wrap;
+}
+
+.main-header__menu a{
+    color:#fff;
+}
+
+
+
+/* Hero section */
+.hero-section{
+    height:100vh;
+}
+
+.hero-section__title{
+    color:var(--primary-color);
+    font-size:3em;
+    margin-bottom:20px;
+}
+
+.btn{
+    display:block;
+    width:220px;
+    height:50px;
+    line-height:50px;
+    background-color:var(--primary-color);
+    color:White;
+    text-align:center;
+    border-radius:50px;
+    margin:10px 0;
+    transition:all .5s ease;
+}
+
+.btn:hover{
+    background-color:#213e73;
+}
+
+/* Quem-somos section area */
+
+#quem-somos{
+    display:flex;
+    justify-content: space-between;
+}
+
+#quem-somos h2{
+    font-size:32px;
+    color:var(--primary-color);
+    display:flex;
+    margin-bottom:20px;
+}
+
+#quem-somos h2::before{
+    content: "";
+    height:50px;
+    width:5px;
+    margin-right:5px;
+    background-color:var(--primary-color);
+}
+
+#quem-somos img{
+    min-width:420px;
+}
+
+.quem-somos__text{
+    padding-left:20px;
+}
+
+.quem-somos__text p{
+    display:block;
+    width:90%;
+    margin-bottom:10px;
+    line-height: 1.5;
+}
+
+/* Servicos area */
+
+#servicos{
+    flex-direction: column;
+    padding-top:50px;
+    padding-bottom: 100px;
+}
+
+.servicos__title{
+    color:#fff;
+    font-size:2em;
+    margin-bottom: 50px;
+}
+
+.servicos__cards{
+    display:flex;
+    justify-content: space-between;
+    width:992px;
+}
+
+.servicos__cards__item{
+    text-align:center;
+    line-height: 2;
+    color:white;
+}
+
+.servicos__cards__item p{
+    margin-top:20px;
+    font-weight: 600;
+    font-size:20px;
+}
+
+.servicos__cards__item_button{
+    margin-top:20px;
+    width:140px;
+    display:inline-block;
+    height:50px;
+    line-height: 50px;
+    background-color:white;
+    border-radius:30px;
+    text-align:center;
+    color:var(--primary-color);
+    font-weight: 700;
+    font-size:14px;
+}
+
+.container-externo{
+    background-color:var(--primary-color);
+    width:100%;
+}
+
+/* Planos Area */
+
+#planos{
+    flex-direction:column;
+    min-height: 100vh;
+    max-width:992px;
+    margin:auto;
+    padding-top:50px;
+}
+
+.planos__title{
+    font-size:2rem;
+}
+
+.planos__container{
+    display:flex;
+    max-width:992px;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin:auto;
+}
+
+.planos__container__item{
+    border:5px solid var(--primary-color);
+    padding:10px;
+    flex:1;
+    margin-right:20px;
+    max-width:280px;
+    margin-bottom:20px;
+}
+
+.planos__container__item h3{
+    margin-top: 20px;
+    font-size:1.5em;
+    text-align:center;
+}
+
+.planos__container__item h3::after{
+    content: "";
+    width:100%;
+    height:3px;
+    display:block;
+    margin-top:20px;
+    margin-bottom: 10px;
+    background-color: var(--primary-color);
+}
+
+.planos__container__item .btn{
+    margin:auto;
+    margin-bottom:20px;
+}
+
+.planos__container__item ul{
+    padding:10px 20px;
+    display:flex;
+    flex-direction: column;
+    margin-bottom:20px;
+    line-height:1.5;
+}
+
+.planos__container__item ul li{
+    display:flex;
+    align-items: center;
+}
+
+.planos__container__item ul li::before{
+    content: "";
+    width:8px;
+    height:8px;
+    background-color:#122A57;
+    margin-right:10px;
+}
+
+/* footer area */
+
+footer{
+    background-color:var(--primary-color);
+    height:70px;
+    display:flex;
+    align-content: center;
+}
+
+footer .flex-container{
+    justify-content: space-between;   
+    color:#fff;
+}
+
+
+/* Mobile */
+
+@media screen and (max-width:450px){
+    #main-header{
+        position:static;
+    }
+
+    .hero-section{
+        margin-top:50px;
+    }
+
+    .flex-container, .planos__container, .servicos__cards{
+        flex-direction:column;
+        align-items: center;
+        gap:30px;
+    }
+
+    .servicos__cards{
+        width:auto;
+    }
+
+    .planos__container{
+        margin-bottom:20px;
+        margin-top:20px;
+    }
+
+    .planos__title{
+        text-align:center;
+    }
+    .quem-somos__text{
+        margin-top:50px;
+        order:1;
+    }
+
+    .quem-somos__image{
+        order:2;
+    }
+
+    #quem-somos img{
+        min-width:auto;
+    }
+
+    .footer-container{
+        gap:0;
+    }
+    
+}
