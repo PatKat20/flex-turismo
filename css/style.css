@@ -275,8 +275,12 @@ footer .flex-container{
         position:static;
     }
 
+    .main-header__menu{
+        display:none;
+    }
+
     .hero-section{
-        margin-top:50px;
+        margin-top:15px;
         justify-content: center;
     }
 
