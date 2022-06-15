@@ -1,2 +1,3 @@
-# flex-turismo
-Flex turismo site feito inteiramente com flexbox
+# Flex Turismo
+
+Um website feito inteiramente com flexbox desde a versão desktop para a mobile.
